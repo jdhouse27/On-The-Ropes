@@ -1,0 +1,85 @@
+h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px
+}
+
+body {
+    background-image: url("/assets/images/background1.0.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+p{
+    font-size: 1em:
+}
+
+.gameText{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-emphasis: bold;
+    text-align: left;
+    padding: 15px;
+}    
+
+#playerContainer1{
+    width: 150px;
+    height: 145px;
+    border: 3px;
+    padding: 5px;
+    border-style: solid;
+    border-color: rgb(18, 104, 18);
+    font: 1em sans-serif;
+    display: inline-block;
+    text-align: center;
+
+}
+#playerContainer2{
+    width: 150px;
+    height: 145px;
+    border: 3px;
+    padding: 5px;
+    border-style: solid;
+    border-color: rgb(18, 104, 18); 
+    font: 1em sans-serif;  
+    display: inline-block;
+    text-align: center;
+}
+#playerContainer3{
+    width: 150px;
+    height: 145px;
+    border: 3px;
+    padding: 5px;
+    border-style: solid;
+    border-color: rgb(18, 104, 18);  
+    font: 1em sans-serif;
+    display: inline-block;
+    text-align: center;
+}
+#playerContainer4{
+    width: 155px;
+    height: 145px;
+    border: 3px;
+    padding: 5px;
+    border-style: solid;
+    border-color: rgb(18, 104, 18);
+    font: 1em sans-serif;
+    display: inline-block;
+    text-align: center;
+}
+#imgObiwan{
+    width: 120px;
+    height: 80px;
+}
+#imgLuke{
+    width: 120px;
+    height: 80px;
+}
+#imgSidious{
+    width: 120px;
+    height: 80px;
+}
+
+#imgMaul{
+    width: 120px;
+    height: 80px;
+}

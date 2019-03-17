@@ -3,53 +3,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css" media="screen">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
-
-<h2>Star Wars RPG</h2>    
-
-<div class="hero">
-    <p class="gameText">Your Character</p>
-</div>
-
-<div class="playerContainer">
-    <p>Obi-Wan Kenobi</p>
-    <img id="imgObiwan" src="assets/images/obiwan.png">
-    <p id="health1"></p>
-</div>
-<div class="playerContainer">
-    <p>Luke Skywalker</p>
-    <img id="imgLuke" src="assets/images/luke.jpg">
-    <p id="health2"></p>
     
+<div class="row">
+    <div class="col-sm-1 col-md-1 col-lg-1"></div>
+    <div class="col-sm-6 col-md-8 col-lg-8">
+        <div class="row">
+            <div class="col-sm|md|lg">
+                <div id="playerContainer1">
+                    <p>Obi-Wan Kenobi</p>
+                    <img id="imgObiwan" src="assets/images/obiwan.png">
+                    <p id="health1">199</p>
+                </div>
+            </div>
+            <div class="col-sm|md|lg">
+                <div id="playerContainer2">
+                    <p>Luke Skywalker</p>
+                    <img id="imgLuke" src="assets/images/luke.jpg">
+                    <p id="health2">151</p>
+                </div>
+            </div>
+            <div class="col-sm|md|lg">
+                <div id="playerContainer3">
+                    <p>Darth Sidious</p>
+                    <img id="imgSidious" src="assets/images/darth_sidious.png">
+                    <p id="health3">150</p>    
+                </div>
+            </div>
+            <div class="col-sm|md|lg">
+                <div id="playerContainer4">
+                    <p>Darth Maul</p>
+                    <img id="imgMaul" src="assets/images/darth_maul.jpg">
+                    <p id="health4">151</p>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <div class="col-sm-5 col-md-3 col-lg-3">
+        <h2>Star Wars RPG!</h2>  
+    </div>  
 </div>
-<div class="playerContainer">
-    <p>Darth Sidious</p>
-    <img id="imgSidious" src="assets/images/darth_sidious.png">
-    <p id="health3"></p>
-    
+
+<div class="row">
+    <div class="col-sm-6 col-md-4 col-lg-4">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <p class="gameText">Your Character</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <p class="hero"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-8 col-lg-8"></div>
 </div>
-<div class="playerContainer">
-    <p>Darth Maul</p>
-    <img id="imgMaul" src="assets/images/darth_maul.jpg">
-    <p id="health4"></p>
+<div class="row">
 
 </div>
-
-
-<div class="enemiesAvail">
-        <p class="gameText">Enemies Available to Attack</p>
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <p class="gameText">Enemies Available to Attack</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <p class="enemiesAvailable"></p>
+            </div>    
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6"></div>
 </div>
 
-<div class="fight">
-        <p class="gameText">Fight Selection</p>
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <p class="gameText">Fight Selection</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <p class="fight"></p>
+            </div>
+        </div>
+    </div>      
 </div>
+
+<br>
 
 <button id="attack">Attack</button>
-
-<div class="Defender">
-    <p class="gameText">Defender</p>
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <p class="gameText">Defender</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <p class="Defender"></p>
+            </div>
+        </div>
+    </div>      
 </div>
 
 <div class="fightStatus">
@@ -57,6 +120,11 @@
 </div>
 
 <button id="reset">Restart</button>
+
+<script src="assets/javascript/game.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 </html>
