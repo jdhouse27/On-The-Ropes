@@ -1,85 +1,125 @@
-h2 {
+.title {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 10px
+    font-size: 2.5em;
+    color: antiquewhite;
 }
 
 body {
-    background-image: url("/assets/images/background1.0.jpg");
+    background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
 }
-p{
-    font-size: 1em:
+
+img {
+  width: 150px;
+  height: 100px;
+  border-radius: 10px;
 }
 
-.gameText{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-emphasis: bold;
-    text-align: left;
-    padding: 15px;
-}    
-
-#playerContainer1{
-    width: 150px;
-    height: 145px;
-    border: 3px;
-    padding: 5px;
-    border-style: solid;
-    border-color: rgb(18, 104, 18);
-    font: 1em sans-serif;
-    display: inline-block;
-    text-align: center;
-
-}
-#playerContainer2{
-    width: 150px;
-    height: 145px;
-    border: 3px;
-    padding: 5px;
-    border-style: solid;
-    border-color: rgb(18, 104, 18); 
-    font: 1em sans-serif;  
-    display: inline-block;
-    text-align: center;
-}
-#playerContainer3{
-    width: 150px;
-    height: 145px;
-    border: 3px;
-    padding: 5px;
-    border-style: solid;
-    border-color: rgb(18, 104, 18);  
-    font: 1em sans-serif;
-    display: inline-block;
-    text-align: center;
-}
-#playerContainer4{
-    width: 155px;
-    height: 145px;
-    border: 3px;
-    padding: 5px;
-    border-style: solid;
-    border-color: rgb(18, 104, 18);
-    font: 1em sans-serif;
-    display: inline-block;
-    text-align: center;
-}
-#imgObiwan{
-    width: 120px;
-    height: 80px;
-}
-#imgLuke{
-    width: 120px;
-    height: 80px;
-}
-#imgSidious{
-    width: 120px;
-    height: 80px;
+.initial-select {
+  font-size: 2em;
+  color: antiquewhite;
 }
 
-#imgMaul{
-    width: 120px;
-    height: 80px;
+.fighter {
+    font-size: 1.3em;
+    color: antiquewhite;
 }
+
+.fight-section {
+    font-size: 1.3em;
+    color: antiquewhite;
+}
+
+.opponet-attack {
+    font-size: 1.3em;
+    color: antiquewhite;
+}
+
+.attack {
+    font-size: 1.3em;
+}
+
+.your-fighter {
+    width: 190px;
+    height: 160px;
+}
+
+.character {
+  display: inline-block;
+  cursor: pointer;
+  background-color: lightgray;
+  border-color: rgb(77, 76, 76);
+  border-style: solid;
+  border-width: 3px;
+  margin: 5px;
+}
+
+.character-image {
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.character-name {
+  text-align: center;
+  
+}
+
+.character-health {
+  text-align: center;
+  
+}
+
+.other-Opponents{
+    font-size: 1.3em;
+    color: antiquewhite;
+    margin: 5px;
+}
+
+.other-Opponents .character {
+  display: inline-block;
+  cursor: pointer;
+  background-color: rgb(65, 76, 78);
+  border-color: rgb(77, 76, 76);
+  border-style: solid;
+  border-width: 1px;
+}
+
+.opponent {
+  display: inline-block;
+  cursor: pointer;
+  background-color: rgb(65, 76, 78);
+  border-color: rgb(77, 76, 76);
+  border-style: solid;
+  border-width: 1px;
+}
+
+.opponent-attack .character {
+  color: white;
+  background-color: rgb(65, 76, 78);
+}
+
+.target-opponent {
+  color: white;
+  background-color: red;
+}
+
+.endMessage {
+  font-size: 2em;
+  color: red;
+}
+#game-message {
+    font-size: 1em;
+    color: red;
+    font-weight: bold; 
+}
+#restart-button {
+  visibility: hidden;
+  font-size: 1.3em;
+}
+
+
