@@ -36,14 +36,24 @@ $(document).ready(function() {
   var availableOpponents = [];
   var opponent;
   var turnCounter = 1;
-  var killCount = 0;
+	var killCount = 0;
+	var opponentsLabel = "Opponents Available To Fight";
+	var fighterLabel = "Your Fighter"
+	var oppLabel = "Opponent"
+
+
+	//Game sounds
+	var punch = new Audio("./assets/sounds/punch.mp3");
+	var start = new Audio("./assets/sounds/bell.mp3");
+	var winSound = new Audio("./assets/sounds/cheer.mp3");
+	var loseSound = new Audio("./assets/sounds/boos3.mp3");
 
   //creating the cards for users to select fighter and Opponents.
   var renderCharacter = function(character, renderArea) {
     var charDiv = $("<div class='character' data-name='" + character.name + "'>");
     var charName = $("<div class='character-name'>").text(character.name);
     var charImage = $("<img alt='image' class='character-image'>").attr("src", character.imageUrl);
-	var charHealth = $("<div class='character-health'>").text(character.health);
+		var charHealth = $("<div class='character-health'>").text(character.health);
 	
 	//adding newly created character properties to character cards
     charDiv.append(charName).append(charImage).append(charHealth);
@@ -54,7 +64,8 @@ $(document).ready(function() {
   var initializeGame = function() {
     for (var key in characters) {
       renderCharacter(characters[key], ".choose-character");
-    }
+		}
+		$(".attack").hide();
   };
 	initializeGame();
 
@@ -84,9 +95,8 @@ var restartGame = function(resultMessage) {
 	});
   
 	var gameState = $("<div class='endMessage'>").text(resultMessage);
-
-	$("body").append(gameState);
-	$("body").append(restart);
+	$(".end-game-notes").append(gameState);
+	$(".end-game-notes").append(restart);
   };
 
   var clearMessage = function() {
@@ -105,7 +115,9 @@ $(".choose-character").on("click", ".character", function() {
 	  }
 	}
 	$(".choose-character").hide();
-
+	$(".other-Opponents").append(opponentsLabel);
+	$(".fighter").append(fighterLabel);
+	$(".opponent-attack").append(oppLabel);
 	updateCharacter(fighter, ".your-fighter");
 	renderOpponents(availableOpponents);
   }
@@ -118,16 +130,17 @@ $(".Opponents").on("click", ".character", function() {
   if ($(".opponent-fight").children().length === 0) {
 	opponent = characters[name];
 	updateCharacter(opponent, ".opponent-fight");
-
-	$(this).remove();
+	start.play()
+	$(this).hide();
 	clearMessage();
-  }
+	}
+	$(".attack").show();
 });
 
 
 $(".attack").on("click", function() {
   if ($(".opponent-fight").children().length !== 0) {
-	
+	punch.play();
 	var attackMessage = "You attacked " + opponent.name + " for " + fighter.attack * turnCounter + " damage.";
 	var counterAttackMessage = opponent.name + " attacked you back for " + opponent.counterAttack + " damage.";
 	clearMessage();
@@ -144,7 +157,10 @@ $(".attack").on("click", function() {
 
 	  if (fighter.health <= 0) {
 		clearMessage();
+		$(".attack").hide(); 
 		restartGame("You have been knocked out...GAME OVER!!!");
+		loseSound.play();
+
 		$(".attack-button").off("click");
 	  }
 	}
@@ -157,8 +173,9 @@ $(".attack").on("click", function() {
 	
 	  if (killCount >= availableOpponents.length) {
 		clearMessage();
-		$(".attack-button").off("click");
+		$(".attack").hide();
 		restartGame("You Are the Champion!!!! GAME OVER!!!");
+		winSound.play();
 	  }
 	}
 	turnCounter++;

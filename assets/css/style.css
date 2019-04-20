@@ -1,15 +1,15 @@
 .title {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 2.5em;
-    color: antiquewhite;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 2.5em;
+  color: whitesmoke;
+  text-align: center;
 }
 
 body {
-    background-image: url("../images/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 img {
@@ -18,33 +18,44 @@ img {
   border-radius: 10px;
 }
 
+.fight-container {
+  text-align: center;
+}
 .initial-select {
-  font-size: 2em;
-  color: antiquewhite;
+  font-size: 1.5em;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.choose-character {
+  text-align: center;
 }
 
 .fighter {
-    font-size: 1.3em;
-    color: antiquewhite;
+  font-size: 1.3em;
+  color: whitesmoke;
 }
 
 .fight-section {
-    font-size: 1.3em;
-    color: antiquewhite;
+  font-size: 1.3em;
+  color: whitesmoke;
 }
 
-.opponet-attack {
-    font-size: 1.3em;
-    color: antiquewhite;
+.opponent-attack {
+  font-size: 1.3em;
+  color: whitesmoke;
 }
 
 .attack {
-    font-size: 1.3em;
+  font-size: 1.3em;
+  background-color: red;
+  font-weight: bold;
+  color: black;
 }
 
 .your-fighter {
-    width: 190px;
-    height: 160px;
+  width: 190px;
+  height: 160px;
 }
 
 .character {
@@ -54,7 +65,7 @@ img {
   border-color: rgb(77, 76, 76);
   border-style: solid;
   border-width: 3px;
-  margin: 5px;
+  margin: 3px;
 }
 
 .character-image {
@@ -66,18 +77,16 @@ img {
 
 .character-name {
   text-align: center;
-  
 }
 
 .character-health {
-  text-align: center;
-  
+  text-align: center; 
 }
 
 .other-Opponents{
-    font-size: 1.3em;
-    color: antiquewhite;
-    margin: 5px;
+  font-size: 1.3em;
+  color: whitesmoke;
+  margin: 3px;
 }
 
 .other-Opponents .character {
@@ -109,17 +118,27 @@ img {
 }
 
 .endMessage {
-  font-size: 2em;
+  font-size: 2.5em;
+  font-weight: bold;
   color: red;
 }
 #game-message {
-    font-size: 1em;
-    color: red;
-    font-weight: bold; 
+  font-size: 1em;
+  color: whitesmoke;
+  /* text-shadow: 2px 2px 4px red; */
+  font-weight: bold; 
+  background-color: rgb(65, 76, 78);
+  text-align: center
 }
 #restart-button {
   visibility: hidden;
   font-size: 1.3em;
+  font-weight: bold;
+}
+
+.end-game-notes {
+  text-align: center;
+  text-shadow: 2px 2px 4px whitesmoke;
 }
 
 

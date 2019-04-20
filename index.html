@@ -3,39 +3,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- jQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css" media="screen">
-    <title>Greatest Boxers</title>
+    <title>On the Ropes</title>
 </head>
 <body>
-    
-<div class="title">
-    <p>Are You Ready To Rumble!!</p>
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <p>Let's Get Ready To Rumble!</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="choose-character">
+                    <p class="initial-select">Pick Your Fighter</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-3">  
+                <div class="fighter-container">
+                    <div class="fighter"></div>
+                    <div class="your-fighter"></div>
+                </div>
+            </div>
+            <div class="col-md-2">  
+                <div class="attack-button-area">
+                    <button class="attack">Fight</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="opponent-attack"></div>
+                <div class="opponent-fight"></div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="other-Opponents"></div>
+                <div class="Opponents"></div>
+            </div>  
+        </div>
 
-<div class="choose-character">
-    <p class="initial-select">Pick Your Fighter</p>
-</div>
-
-<div class="fighter">Your Fighter</div>
-    <div class="your-fighter"></div>
-
-<div class="other-Opponents">Opponents Available To Fight
-    <div class="Opponents"></div>
-</div>
-
-<div class="fight-section">Boxing Ring</div>
-
-<button class="attack">Fight</button>
-
-<div class="opponent-attack">Opponent
-    <div class="opponent-fight"></div>
-</div>
-
-
-<div id="game-message"></div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="game-message"></div>
+                <div class="end-game-notes"></div>
+            </div>
+        </div>
+    </div>
 
 <!-- Javascript tag -->
 <script src="assets/javascript/game.js"></script>
