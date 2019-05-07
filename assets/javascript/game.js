@@ -141,8 +141,8 @@ $(".Opponents").on("click", ".character", function() {
 $(".attack").on("click", function() {
   if ($(".opponent-fight").children().length !== 0) {
 	punch.play();
-	var attackMessage = "You attacked " + opponent.name + " for " + fighter.attack * turnCounter + " damage.";
-	var counterAttackMessage = opponent.name + " attacked you back for " + opponent.counterAttack + " damage.";
+	var attackMessage = "You hurt " + opponent.name + " by " + fighter.attack * turnCounter + ".";
+	var counterAttackMessage = opponent.name + " hurt you by " + opponent.counterAttack + ".";
 	clearMessage();
 
 	opponent.health -= fighter.attack * turnCounter;
