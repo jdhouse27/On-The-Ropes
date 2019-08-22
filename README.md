@@ -2,7 +2,7 @@
 Jump in the ring and fight opponents to become the Champion!
 
 ## Website
-https://jdhouse27.github.io/unit-4-game/
+https://jdhouse27.github.io/On-The-Ropes/
 
 ## Purpose:
 To design a interactive JavaScript game application
